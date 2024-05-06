@@ -1,53 +1,48 @@
-/* Gallery container */
-/* Body styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000000; /* Light gray background */
-    padding: 20px;
+    background-color: #000000; /* Light gray background color */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
 }
 
 
 .gallery {
-    display: flex;
-    flex-wrap: nowrap; /* Change flex-wrap to nowrap to keep items in a single line */
-    justify-content: space-around;
-    margin: 20px;
-    background-color: rgb(78, 59, 59);
     padding: 20px;
+    background-color: #000000;
+}
+
+.card-group {
+    margin-bottom: 20px;
+    background-color: #1b1919;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Image container */
-.gallery img {
-    width: 100px;
-    height: 150px;
-    margin: 5px;
-    border-radius: 8px; /* Rounded corners */
-    border: 2px solid transparent; /* Transparent border */
-    transition: transform 0.3s ease, border-color 0.3s ease; /* Smooth transition for transform and border color */
+.card-group h2 {
+    margin: 0;
+    padding: 10px;
+    background-color: #673131;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-/* Image hover effect */
-.gallery img:hover {
-    transform: scale(1.05); /* Scale up on hover */
-    border-color: #151e5c; /* White border on hover */
+.cards {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
 }
 
-/* Title styles */
-h2 {
-    font-size: 40px;
-    font-weight: bold;
-    color: #151e5c; /* White title color */
-    margin-bottom: 10px;
+.card {
+    flex: 0 0 auto;
+    width: 100px; /* Adjust card width as needed */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: #000000;
 }
 
-/* Background color for different suits */
-div:nth-child(odd) {
-    background-color: rgb(99, 84, 84); /* Transparent white */
-}
-
-div:nth-child(even) {
-    background-color: rgb(99, 84, 84); /* Transparent white with higher opacity */
+.card img {
+    max-width: 100%;
+    height: auto;
 }
