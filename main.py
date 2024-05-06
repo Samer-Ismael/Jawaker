@@ -46,8 +46,8 @@ class CardDetector:
                 width, height = screenshot.size
                 top_percentage_to_remove = 0.08
                 crop_top_height = int(height * top_percentage_to_remove)
-                crop_width = width // 4.5
-                crop_height = height // 4.5
+                crop_width = width // 5.5
+                crop_height = height // 5.5
                 upper_right_box = (width - crop_width, crop_top_height, width, crop_height)
                 upper_right = screenshot.crop(upper_right_box)
                 upper_right.save("upper_right_secondary_display.png")

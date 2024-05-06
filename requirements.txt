@@ -1,0 +1,6 @@
+Flask
+opencv-python
+numpy
+Pillow
+mss==9.0.1
+scikit-image
