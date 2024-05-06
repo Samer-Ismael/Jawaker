@@ -47,7 +47,7 @@ python main.py
 Once the server is running, you can access the detected cards data via the endpoint:
 
 ```
-http://localhost:5000/cards
+http://localhost:5001/cards
 ```
 
 The detected cards will be returned as a JSON list.
@@ -55,7 +55,7 @@ The detected cards will be returned as a JSON list.
 You can also use the `/picture` endpoint to retrieve a picture as the app seeing your screen:
 
 ```
-http://localhost:5000/picture
+http://localhost:5001/picture
 ```
 
 ### Customization

@@ -28,4 +28,4 @@ def get_picture():
 if __name__ == '__main__':
     # Start a separate thread for card detection
     threading.Thread(target=run_card_detection, daemon=True).start()
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
