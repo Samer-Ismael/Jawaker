@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_file
 from card_detector import CardDetector
 import time
 import threading
@@ -17,6 +17,13 @@ def run_card_detection():
     while True:
         card_detector.get_pic_and_save()
         time.sleep(1)
+
+@app.route('/picture')
+def get_picture():
+    # Set the path to the picture here
+    picture_path = "upper_right_secondary_display.png"
+
+    return send_file(picture_path, mimetype='image/png')
 
 if __name__ == '__main__':
     # Start a separate thread for card detection
