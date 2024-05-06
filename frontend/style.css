@@ -9,14 +9,15 @@ body {
 
 .gallery {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Change flex-wrap to nowrap to keep items in a single line */
     justify-content: space-around;
     margin: 20px;
-    background-color: rgb(78, 59, 59); /* Gradient background */
-    padding: 20px; /* Add some padding for spacing */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    background-color: rgb(78, 59, 59);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Image container */
 .gallery img {

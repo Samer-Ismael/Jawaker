@@ -21,9 +21,10 @@ The following dependencies are required to run the project:
 - Pillow: Pillow is a Python Imaging Library (PIL) fork that adds support for opening, manipulating, and saving many different image file formats.
 - MSS (Multi-Screen Shot): MSS is a cross-platform Python library used for capturing screenshots.
 - scikit-image: scikit-image is a collection of algorithms for image processing in Python.
-
+- Flask-CORS: Flask-CORS is a Flask extension for handling Cross-Origin Resource Sharing (CORS), making it possible to make requests from the frontend to the Flask server from different origins.
 
 These dependencies can be installed via the `requirements.txt` file using the following command:
+
 
 ```bash
 pip install -r requirements.txt
@@ -58,6 +59,14 @@ You can also use the `/picture` endpoint to retrieve a picture as the app seeing
 ```
 http://localhost:5001/picture
 ```
+
+Additionally, you can access the homepage via the root endpoint:
+```
+http://localhost:5001/
+```
+
+This endpoint will serve the HTML file to the client.
+
 
 ### Customization
 

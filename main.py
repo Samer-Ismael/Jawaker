@@ -1,12 +1,31 @@
-from flask import Flask, jsonify, send_file
-from card_detector import CardDetector
-import time
+import os
+
+from flask import Flask, jsonify, send_file, redirect, send_from_directory
+from flask_cors import CORS
 import threading
+import time
+
+from card_detector import CardDetector
 
 app = Flask(__name__)
-
+CORS(app)
 # Initialize CardDetector instance
 card_detector = CardDetector(card_folder="cards")
+
+
+# Define the path to the HTML file in the frontend folder
+frontend_dir = os.path.join(os.path.dirname(__file__), 'frontend')
+
+
+@app.route('/')
+def index():
+    # Send the HTML file to the client
+    return send_file(os.path.join(frontend_dir, 'index.html'))
+
+@app.route('/<path:filename>')
+def serve_static(filename):
+    # Serve static files (CSS, JavaScript, etc.) from the frontend directory
+    return send_from_directory(frontend_dir, filename)
 
 @app.route('/cards')
 def get_detected_cards():
