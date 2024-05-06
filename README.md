@@ -73,8 +73,6 @@ To customize the portion of the screen being watched by the application, follow 
 
 Feel free to adjust these parameters as needed to fit your specific use case!
 
-Feel free to adjust these parameters as needed to fit your specific use case!
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
