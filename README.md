@@ -15,12 +15,13 @@ The project utilizes computer vision techniques to capture and process images, c
 
 The following dependencies are required to run the project:
 
-- Python 3.8 or higher
-- OpenCV
-- NumPy
-- Pillow
-- MSS (Multi-Screen Shot)
-- scikit-image
+- Python 3.8 or higher: Python is the programming language in which the project is written.
+- OpenCV: OpenCV (Open Source Computer Vision Library) is a library of programming functions mainly aimed at real-time computer vision.
+- NumPy: NumPy is a fundamental package for numerical computing with Python.
+- Pillow: Pillow is a Python Imaging Library (PIL) fork that adds support for opening, manipulating, and saving many different image file formats.
+- MSS (Multi-Screen Shot): MSS is a cross-platform Python library used for capturing screenshots.
+- scikit-image: scikit-image is a collection of algorithms for image processing in Python.
+
 
 These dependencies can be installed via the `requirements.txt` file using the following command:
 
