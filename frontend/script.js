@@ -55,3 +55,12 @@ document.querySelectorAll('.card-carousel').forEach(function(carousel) {
         cards.style.transform = `translateX(${position}px)`;
     });
 });
+
+
+ setInterval(function() {
+     // Get the image element
+     const liveImage = document.getElementById('live-image');
+
+     // Reload the image by changing its src attribute
+     liveImage.src = 'http://localhost:5001/picture?' + new Date().getTime(); // Add timestamp to ensure browser refreshes the image
+ }, 1000); // Update every 1 second (1000 milliseconds)

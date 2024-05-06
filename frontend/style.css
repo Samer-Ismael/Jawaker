@@ -46,3 +46,10 @@ body {
     max-width: 100%;
     height: auto;
 }
+
+.image-container {
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
