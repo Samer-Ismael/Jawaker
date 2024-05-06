@@ -132,8 +132,10 @@ class CardDetector:
         }
         remaining_cards = standard_deck - self.detected_cards
         print("Remaining cards:")
-        for card in remaining_cards:
-            print(card)
+        #for card in remaining_cards:
+            #print(card)
+        
+        print(self.detected_cards)
 
     def main(self):
         while True:
@@ -142,7 +144,7 @@ class CardDetector:
             # Print the remaining cards
             self.print_remaining_cards()
             
-            time.sleep(4)
+            time.sleep(2)
             
 
 if __name__ == "__main__":
