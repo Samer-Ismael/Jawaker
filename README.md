@@ -37,7 +37,7 @@ To use the card detection system:
 
 ### Running the Application
 
-Run the `service.py` script to start the Flask web server, which serves as the backend for the card detection system:
+Run the `main.py` script to start the Flask web server, which serves as the backend for the card detection system:
 
 ```bash
 python main.py
