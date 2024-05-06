@@ -66,6 +66,7 @@ class CardDetector:
 
     def detect_cards(self, image):
         print("Detecting cards...")
+        cards_detected = False  # Flag to indicate if any cards were detected
         # Resize card images to match the dimensions of the captured image
         resized_card_images = {}
         for name, card_image in self.card_images.items():
@@ -103,7 +104,14 @@ class CardDetector:
                 if best_match_similarity > 0.6:  # Adjust similarity threshold as needed
                     self.detected_cards.add(best_match_name)
                     print(f"Detected card: {best_match_name} (Similarity: {best_match_similarity})")
+                    cards_detected = True  # Set flag to True if any cards were detected
+
         print("Card detection complete.")
+
+        # If no cards were detected, clear the detected cards list
+        if not cards_detected:
+            print("No cards detected. Clearing detected cards list.")
+            self.detected_cards.clear()
 
     def compare_images(self, detected_card, resized_card_images):
         best_match_name = None
@@ -130,8 +138,8 @@ class CardDetector:
             'Ace of Clubs', 'Two of Clubs', 'Three of Clubs', 'Four of Clubs', 'Five of Clubs', 'Six of Clubs', 'Seven of Clubs', 'Eight of Clubs', 'Nine of Clubs', 'Ten of Clubs', 'Jack of Clubs', 'Queen of Clubs', 'King of Clubs',
             'Ace of Diamonds', 'Two of Diamonds', 'Three of Diamonds', 'Four of Diamonds', 'Five of Diamonds', 'Six of Diamonds', 'Seven of Diamonds', 'Eight of Diamonds', 'Nine of Diamonds', 'Ten of Diamonds', 'Jack of Diamonds', 'Queen of Diamonds', 'King of Diamonds'
         }
-        remaining_cards = standard_deck - self.detected_cards
-        print("Remaining cards:")
+        #remaining_cards = standard_deck - self.detected_cards
+        #print("Remaining cards:")
         #for card in remaining_cards:
             #print(card)
         
@@ -141,10 +149,16 @@ class CardDetector:
         while True:
             # Call the function to capture and save the image
             self.get_pic_and_save()
+            
+             # If no cards detected, clear the detected cards list
+            if not self.detected_cards:
+                print("No cards detected. Clearing detected cards list.")
+                self.detected_cards.clear()
+            
             # Print the remaining cards
             self.print_remaining_cards()
             
-            time.sleep(2)
+            time.sleep(1)
             
 
 if __name__ == "__main__":
