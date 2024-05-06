@@ -1,4 +1,5 @@
 # Jawaker
+
 This Python project is a card detection system designed to recognize playing cards from a secondary display or image input.
 
 ## Overview
@@ -50,6 +51,12 @@ http://localhost:5000/cards
 ```
 
 The detected cards will be returned as a JSON list.
+
+You can also use the `/picture` endpoint to retrieve a picture as the app seeing your screen:
+
+```
+http://localhost:5000/picture
+```
 
 ### Customization
 
