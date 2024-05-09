@@ -37,24 +37,6 @@ function fetchDetectedCardsAndUpdateGallery() {
 setInterval(fetchDetectedCardsAndUpdateGallery, 1000);
 
 
-document.querySelectorAll('.card-carousel').forEach(function(carousel) {
-    const cards = carousel.querySelector('.cards');
-    const cardWidth = carousel.querySelector('.card').offsetWidth;
-    let position = 0;
-
-    carousel.querySelector('.prev').addEventListener('click', function() {
-        position += cardWidth;
-        position = Math.min(position, 0);
-        cards.style.transform = `translateX(${position}px)`;
-    });
-
-    carousel.querySelector('.next').addEventListener('click', function() {
-        position -= cardWidth;
-        const maxPosition = -((cards.children.length - 1) * cardWidth);
-        position = Math.max(position, maxPosition);
-        cards.style.transform = `translateX(${position}px)`;
-    });
-});
 
 
 setInterval(function() {
