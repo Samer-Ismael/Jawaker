@@ -102,7 +102,7 @@ class CardDetector:
                 futures.append(future)
             for future in futures:
                 best_match_name, best_match_similarity = future.result()
-                if best_match_similarity > 0.5:  # Adjust similarity threshold as needed
+                if best_match_similarity > 0.6:  # Adjust similarity threshold as needed
                     self.detected_cards.add(best_match_name)
                     print(f"Detected card: {best_match_name} (Similarity: {best_match_similarity})")
                     cards_detected = True  # Set flag to True if any cards were detected
@@ -148,7 +148,7 @@ class CardDetector:
             # Print the remaining cards
             self.print_remaining_cards()
 
-            time.sleep(1)
+            time.sleep(0.5)
 
     def print_remaining_cards(self):
         print(self.detected_cards)
