@@ -89,8 +89,9 @@ class CardDetector:
         resized_detected_cards = []
         for contour in contours:
             x, y, w, h = cv2.boundingRect(contour)
-            card = image[y:y+h, x:x+w]
-            resized_card = cv2.resize(card, (image.shape[1], image.shape[0]))  # Assuming width and height are dimensions of card images
+            card = image[y:y + h, x:x + w]
+            resized_card = cv2.resize(card, (
+            image.shape[1], image.shape[0]))  # Assuming width and height are dimensions of card images
             resized_detected_cards.append(resized_card)
 
         # Compare detected cards with resized card images
@@ -138,15 +139,15 @@ class CardDetector:
         while True:
             # Call the function to capture and save the image
             self.get_pic_and_save()
-            
-             # If no cards detected, clear the detected cards list
+
+            # If no cards detected, clear the detected cards list
             if not self.detected_cards:
                 print("No cards detected. Clearing detected cards list.")
                 self.detected_cards.clear()
-            
+
             # Print the remaining cards
             self.print_remaining_cards()
-            
+
             time.sleep(1)
 
     def print_remaining_cards(self):
