@@ -1,6 +1,6 @@
-Note: New version that is way more advanced is here:
+**Note:** New version that is way more advanced is here:
     ```
-    git clone https://github.com/yourusername/card-detection-app.git
+    https://github.com/yourusername/card-detection-app.git
     ```
 
 # Jawaker
