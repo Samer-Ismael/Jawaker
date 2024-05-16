@@ -1,3 +1,8 @@
+Note: New version that is way more advanced is here:
+    ```
+    git clone https://github.com/yourusername/card-detection-app.git
+    ```
+
 # Jawaker
 
 This Python project is a card detection system designed to recognize playing cards from a secondary display or image input.
